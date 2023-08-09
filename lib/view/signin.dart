@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/constants/app_assets.dart';
 import 'package:spotify_clone/constants/app_colors.dart';
+import 'package:spotify_clone/view/song_player.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -105,7 +106,12 @@ class SigninScreen extends StatelessWidget {
                   )),
               const SizedBox(height: 10),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AudioPlayerScreen()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: kBlackColor,
                     fixedSize: const Size(300, 45),

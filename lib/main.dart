@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/view/signin.dart';
 import 'package:spotify_clone/view/song_player.dart';
 
 void main() {
@@ -19,8 +20,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      // home: const SigninScreen(),
-      home: const AudioPlayerScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SigninScreen(),
+        '/audioPlayer': (context) => const AudioPlayerScreen(),
+      },
     );
   }
 }
+
